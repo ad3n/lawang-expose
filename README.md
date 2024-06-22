@@ -272,6 +272,8 @@ JSON to JSON Transformation berfungsi untuk memanipulasi response dari endpoint
 
 ## Lawang Internal Javascript Object and Function
 
+Berikut adalah internal object dan function yang di-provide Lawang. Semua yang datang dari lawang baik variable maupun fungsi akan dikirim dalam format `string`, sebagian berisi JSON string sehingga perlu fungsi `JSON.parse()` untuk mengubah menjadi JSON object
+
 ```js
 // string
 $GT.uri
