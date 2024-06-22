@@ -270,9 +270,22 @@ JSON to JSON Transformation berfungsi untuk memanipulasi response dari endpoint
 ]
 ```
 
-## Lawang Internal Javascript Function
+## Lawang Internal Javascript Object and Function
 
 ```js
+// string
+$GT.uri
+// string
+$GT.method
+// string
+$GT.queries
+// string
+$GT.params
+// string
+$GT.headers
+// string
+$GT.payload
+
 $GT.uuid(): string
 
 /**
@@ -342,5 +355,17 @@ $GT.xml2json(xml): string
  * code: int
  **/
 $GT.response(body, code): void
+
+/**
+ * payload: string
+ * encoded: string
+ * plainText: string
+ * secret: string
+ * privateKey: string
+ * publicKey: string
+ **/
+$SNAP.hmac512(payload, secret): string
+$SNAP.sha256_signing(payload, privateKey): string
+$SNAP.sha256_verify(encoded, plainText, publicKey): bool
 
 ```
