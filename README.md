@@ -330,10 +330,10 @@ $GT.patch(url, body, headers): string
 $GT.patch(url, body, timeout): string
 $GT.patch(url, body, headers, timeout): string
 
-$GT.delete(url): void 
-$GT.delete(url, headers): void 
-$GT.delete(url, timeout): void 
-$GT.delete(url, headers, timeout): void 
+$GT.delete(url): string 
+$GT.delete(url, headers): string 
+$GT.delete(url, timeout): string 
+$GT.delete(url, headers, timeout): string 
 
 /**
  * source: string
