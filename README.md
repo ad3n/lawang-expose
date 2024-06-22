@@ -369,3 +369,7 @@ $SNAP.sha256_signing(payload, privateKey): string
 $SNAP.sha256_verify(encoded, plainText, publicKey): bool
 
 ```
+
+## Javascript Library
+
+- [MomentJS](https://momentjs.com)
