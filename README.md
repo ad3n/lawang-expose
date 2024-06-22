@@ -270,10 +270,77 @@ JSON to JSON Transformation berfungsi untuk memanipulasi response dari endpoint
 ]
 ```
 
-## Javascript API
+## Lawang Internal Javascript Function
 
 ```js
-$GT.uuid()
-$GT.request(url, method, )
+$GT.uuid(): string
+
+/**
+ * url: string
+ * method: string
+ * body: object
+ * headers: object
+ * timeout: int (in second)
+ **/
+$GT.request(url, method): string
+$GT.request(url, method, body): string
+$GT.request(url, method, timeout): string
+$GT.request(url, method, body, headers): string
+$GT.request(url, method, body, timeout): string
+$GT.request(url, method, body, headers, timeout): string
+
+$GT.get(url): string
+$GT.get(url, headers): string
+$GT.get(url, timeout): string
+$GT.get(url, headers, timeout): string
+
+$GT.post(url): string
+$GT.post(url, body): string
+$GT.post(url, timeout): string
+$GT.post(url, body, headers): string
+$GT.post(url, body, timeout): string
+$GT.post(url, body, headers, timeout): string
+
+$GT.put(url): string
+$GT.put(url, body): string
+$GT.put(url, timeout): string
+$GT.put(url, body, headers): string
+$GT.put(url, body, timeout): string
+$GT.put(url, body, headers, timeout): string
+
+$GT.patch(url): string
+$GT.patch(url, body): string
+$GT.patch(url, timeout): string
+$GT.patch(url, body, headers): string
+$GT.patch(url, body, timeout): string
+$GT.patch(url, body, headers, timeout): string
+
+$GT.delete(url): void 
+$GT.delete(url, headers): void 
+$GT.delete(url, timeout): void 
+$GT.delete(url, headers, timeout): void 
+
+/**
+ * source: string
+ * sql: string
+ * table: string
+ * identities: object
+ * payload: object
+ **/
+$GT.query(source, sql): string 
+$GT.save(source, table, payload): void
+$GT.upsert(source, table, identities, payload): void
+$GT.update(source, table, identities, payload): void
+
+/**
+ * xml: string
+ **/
+$GT.xml2json(xml): string
+
+/**
+ * body: object
+ * code: int
+ **/
+$GT.response(body, code): void
 
 ```
