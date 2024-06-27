@@ -2,7 +2,7 @@
 
 ## JSON to JSON Transformation
 
-JSON to JSON Transformation berfungsi untuk memanipulasi response dari endpoint
+JSON to JSON Transformation berfungsi untuk memanipulasi response pada endpoint HTTP
 
 - Response asli
 
@@ -288,7 +288,11 @@ $GT.headers
 // string
 $GT.payload
 
+/**
+ * payload: string
+ **/
 $GT.uuid(): string
+$GT.md5(payload): string
 
 /**
  * url: string
