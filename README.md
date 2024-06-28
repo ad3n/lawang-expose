@@ -352,6 +352,18 @@ $GT.upsert(source, table, identities, payload): void
 $GT.update(source, table, identities, payload): void
 
 /**
+ * payload: string
+ * encoded: string
+ * plainText: string
+ * secret: string
+ * privateKey: string
+ * publicKey: string
+ **/
+$GT.hmac512(payload, secret): string
+$GT.sha256_signing(payload, privateKey): string
+$GT.sha256_verify(encoded, plainText, publicKey): bool
+
+/**
  * xml: string
  **/
 $GT.xml2json(xml): string
@@ -361,18 +373,6 @@ $GT.xml2json(xml): string
  * code: int
  **/
 $GT.response(body, code): void
-
-/**
- * payload: string
- * encoded: string
- * plainText: string
- * secret: string
- * privateKey: string
- * publicKey: string
- **/
-$SNAP.hmac512(payload, secret): string
-$SNAP.sha256_signing(payload, privateKey): string
-$SNAP.sha256_verify(encoded, plainText, publicKey): bool
 
 ```
 
