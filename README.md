@@ -289,6 +289,8 @@ $GT.headers
 $GT.payload
 
 /**
+ * Fungsi ini diload menggunakan plugin
+ * 
  * payload: string
  **/
 $GT.uuid(): string
@@ -352,6 +354,8 @@ $GT.upsert(source, table, identities, payload): void
 $GT.update(source, table, identities, payload): void
 
 /**
+ * Fungsi ini diload menggunakan plugin
+ * 
  * payload: string
  * encoded: string
  * plainText: string
@@ -364,6 +368,8 @@ $GT.sha256_signing(payload, privateKey): string
 $GT.sha256_verify(encoded, plainText, publicKey): bool
 
 /**
+ * Fungsi ini diload menggunakan plugin
+ * 
  * xml: string
  **/
 $GT.xml2json(xml): string
