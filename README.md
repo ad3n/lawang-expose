@@ -376,6 +376,8 @@ $GT.response(body, code): void
 
 ```
 
+Jika ada fungsi di atas yang tidak dapat digunakan, Anda menghubungi teknikal support kami untuk mendaftarkan fungsi tersebut
+
 ## Javascript Library
 
 - [MomentJS](https://momentjs.com)
