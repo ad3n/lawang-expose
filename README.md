@@ -371,8 +371,11 @@ $GT.sha256_verify(encoded, plainText, publicKey): bool
  * Fungsi ini diload menggunakan plugin
  * 
  * xml: string
+ * json: string
+ * spec: string
  **/
 $GT.xml2json(xml): string
+$GT.transform(json, spec): string
 
 /**
  * body: object
