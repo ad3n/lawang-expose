@@ -303,12 +303,12 @@ $GT.md5(payload): string
  * headers: object
  * timeout: int (in second)
  **/
-$GT.request(url, method): string
-$GT.request(url, method, body): string
-$GT.request(url, method, timeout): string
-$GT.request(url, method, body, headers): string
-$GT.request(url, method, body, timeout): string
-$GT.request(url, method, body, headers, timeout): string
+$GT.request(method, url): string
+$GT.request(method, url, body): string
+$GT.request(method, url, timeout): string
+$GT.request(method, url, body, headers): string
+$GT.request(method, url, body, timeout): string
+$GT.request(method, url, body, headers, timeout): string
 
 $GT.get(url): string
 $GT.get(url, headers): string
