@@ -365,7 +365,7 @@ $GT.update(source, table, identities, payload): void
  **/
 $GT.hmac512(payload, secret): string
 $GT.sha256_signing(payload, privateKey): string
-$GT.sha256_verify(encoded, plainText, publicKey): bool
+$GT.sha256_verify(encoded, plainText, publicKey): string
 
 /**
  * Fungsi ini diload menggunakan plugin
@@ -376,6 +376,12 @@ $GT.sha256_verify(encoded, plainText, publicKey): bool
  **/
 $GT.xml2json(xml): string
 $GT.transform(json, spec): string
+
+/**
+ * source: string
+ * path: string
+ **/
+$GT.load_file(source, path): string
 
 /**
  * body: object
