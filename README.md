@@ -380,8 +380,10 @@ $GT.transform(json, spec): string
 /**
  * source: string
  * path: string
+ * body: string
  **/
 $GT.load_file(source, path): string
+$GT.store_file(source, body, path): void
 
 /**
  * body: object
