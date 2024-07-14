@@ -1,10 +1,24 @@
-# Lawang Expose
+# HTTP Service
 
-## JSON to JSON Transformation
+HTTP Service adalah service yang bertugas untuk meng-_handle_ HTTP Endpoint pada internal Lawang. By default, HTTP Service menerapkan _circuit breaker_ per _backend/connection/host_ untuk menghindari traffic flooding dan mengoptimalkan kinerja dari Lawang itu sendiri. HTTP Service juga menerapkan [zero trust](https://www.krakend.io/docs/design/zero-trust) untuk memastikan keamanan transmisi antara _client_ dan _backend/connection/host_.
 
-JSON to JSON Transformation berfungsi untuk memanipulasi response pada endpoint HTTP
+HTTP Service support Basic Auth, Single Key Auth (Api Key Only) atau Double Keys Auth (Api Key and Token), selain itu HTTP Service juga mendukung _response transformation_ untuk memudahkan dalam memanipulasi _response_ dari _endpoint_. _Response transformation_ hanya dapat digunakan untuk _json response_.  
 
-- Response asli
+## _JSON to JSON Transformation (Response Transformation)_
+
+JSON to JSON Transformation berfungsi untuk memanipulasi _response_ pada HTTP Service. Untuk spesifikasi dari _response transformer_, Lawang menggunakan [GJson](https://github.com/tidwall/gjson) dengan _syntax_ sebagai berikut:
+
+```json
+[
+	{
+		"dest": "GSJON spec"
+	}
+]
+```
+
+Dan berikut adalah contoh penggunaan dari _response transformer_:
+
+- _Response_ asli
 
 ```json
 [
@@ -116,7 +130,7 @@ JSON to JSON Transformation berfungsi untuk memanipulasi response pada endpoint 
 ]
 ```
 
-- Tranformer
+- _Tranformer_
 
 ```json
 [
@@ -133,7 +147,7 @@ JSON to JSON Transformation berfungsi untuk memanipulasi response pada endpoint 
 ]
 ```
 
-- Response akhir
+- _Response_ akhir
 
 ```json
 [
@@ -269,6 +283,10 @@ JSON to JSON Transformation berfungsi untuk memanipulasi response pada endpoint 
 	}
 ]
 ```
+
+*NB: Jika Anda perlu lebih dari sekedar _response manipulations_, saya sarankan Anda menggunakan Javascript Service.*
+
+# Javascript Service
 
 ## Lawang Internal Javascript Object and Function
 
