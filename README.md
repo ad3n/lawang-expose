@@ -1,12 +1,12 @@
-# HTTP Service
+# HTTP _Service_
 
-HTTP Service adalah service yang bertugas untuk meng-_handle_ HTTP Endpoint pada internal Lawang. By default, HTTP Service menerapkan _circuit breaker_ per _backend/connection/host_ untuk menghindari traffic flooding dan mengoptimalkan kinerja dari Lawang itu sendiri. HTTP Service juga menerapkan [zero trust](https://www.krakend.io/docs/design/zero-trust) untuk memastikan keamanan transmisi antara _client_ dan _backend/connection/host_.
+HTTP _Service_ adalah _service_ yang bertugas untuk meng-_handle_ HTTP _Endpoint_ pada internal Lawang. _By default_, HTTP _Service_ menerapkan _circuit breaker_ per _backend/connection/host_ untuk menghindari _traffic flooding_ dan mengoptimalkan kinerja dari Lawang itu sendiri. HTTP Service juga menerapkan [zero trust](https://www.krakend.io/docs/design/zero-trust) untuk memastikan keamanan transmisi antara _client_ dan _backend/connection/host_.
 
-HTTP Service support Basic Auth, Single Key Auth (Api Key Only) atau Double Keys Auth (Api Key and Token), selain itu HTTP Service juga mendukung _response transformation_ untuk memudahkan dalam memanipulasi _response_ dari _endpoint_. _Response transformation_ hanya dapat digunakan untuk _json response_.  
+HTTP _Service support Basic Auth, Single Key Auth (Api Key Only)_ maupun _Double Keys Auth (Api Key and Token)_, selain itu HTTP _Service_ juga mendukung _response transformation_ untuk memudahkan dalam memanipulasi _response_ dari _endpoint_. _Response transformation_ hanya dapat digunakan untuk _json response_.  
 
 ## _JSON to JSON Transformation (Response Transformation)_
 
-JSON to JSON Transformation berfungsi untuk memanipulasi _response_ pada HTTP Service. Untuk spesifikasi dari _response transformer_, Lawang menggunakan [GJson](https://github.com/tidwall/gjson) dengan _syntax_ sebagai berikut:
+JSON to JSON _Transformation_ berfungsi untuk memanipulasi _response_ pada HTTP _Service_ menggunakan spesifikasi sesuai dengan spesifikasi [GJson](https://github.com/tidwall/gjson) dengan _syntax_ sebagai berikut:
 
 ```json
 [
@@ -284,13 +284,17 @@ Dan berikut adalah contoh penggunaan dari _response transformer_:
 ]
 ```
 
-*NB: Jika Anda perlu lebih dari sekedar _response manipulations_, saya sarankan Anda menggunakan Javascript Service.*
+*NB: Jika Anda perlu lebih dari sekedar _response manipulations_, saya sarankan Anda menggunakan Javascript _Service_.*
 
-# Javascript Service
+# Javascript _Service_
 
-## Lawang Internal Javascript Object and Function
+Javascript _Service_ adalah _service_ yang bertugas untuk meng-_handle_ _endpoint_ Javascript. Anda dapat melakukan apapun pada _service_ ini termasuk _HTTP Call_, _Database Query, Database Manipulation, Load File, Store File,_ dan pastinya memanipulasi _request_ maupun _response_. Javascript _Service_ diperuntukan untuk mengakomodir _custom logic_ serta untuk memudahkan dalam integrasi dengan sistem lain tanpa perlu membuat _middleware system_ antara Lawang dan _client_.
 
-Berikut adalah internal object dan function yang di-provide Lawang. Semua yang datang dari lawang baik variable maupun fungsi akan dikirim dalam format `string`, sebagian berisi JSON string sehingga perlu fungsi `JSON.parse()` untuk mengubah menjadi JSON object
+Javascript _Service_ menggunakan EcmaScript6 dengan beberapa penambahan _objects_ maupun _functions_ bawaan namun tidak mendukung untuk menggunakan EcmaScript6 _module_, sehingga `export` dan `import` _keywords_ tidak dapat digunakan pada Lawang.
+
+## _Internal Objects_ dan _Functions_
+
+Berikut adalah _internal objects_ dan _functions_ yang tersedia pada Lawang. Semua yang datang dari lawang baik *_objects_* maupun *_response functions_* akan dikirim dalam format `string` kecuali untuk tipe data primitif, sebagian berisi JSON _string_ sehingga perlu fungsi `JSON.parse()` untuk mengubah menjadi JSON _object_
 
 ```js
 // string
@@ -383,7 +387,7 @@ $GT.update(source, table, identities, payload): void
  **/
 $GT.hmac512(payload, secret): string
 $GT.sha256_signing(payload, privateKey): string
-$GT.sha256_verify(encoded, plainText, publicKey): string
+$GT.sha256_verify(encoded, plainText, publicKey): bool
 
 /**
  * Fungsi ini diload menggunakan plugin
@@ -411,8 +415,8 @@ $GT.response(body, code): void
 
 ```
 
-Jika ada fungsi di atas yang tidak dapat digunakan, Anda menghubungi teknikal support kami untuk mendaftarkan fungsi tersebut
+## Javascript _Libraries_
 
-## Javascript Library
+Selain _internal objects_ dan _functions_, Lawang juga secara _default_ mendukung penggunaan _libraries_ Javascript berikut:
 
-- [MomentJS](https://momentjs.com)
+- [MomentJS](https://momentjs.com) : dapat dipanggil dengan _syntax_ `moment()`
