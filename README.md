@@ -286,6 +286,14 @@ Dan berikut adalah contoh penggunaan dari _response transformer_:
 
 *NB: Jika Anda perlu lebih dari sekedar _response manipulations_, saya sarankan Anda menggunakan Javascript _Service_.*
 
+# _Database Service_
+
+_Database Service_ adalah _service_ yang bertugas untuk meng-_handle endpoint database_. _Database Service_ mem-_provide_ beberapa _driver database_ antara lain MySQL, PostgSQL, Oracle, dll yang dapat mengimplementasikan [`database/sql`](https://go.dev/wiki/SQLDrivers). Pada _Database Service_, hanya diperbolehkan melakukan _query_ `SELECT`.
+
+# _File Service_
+
+_File Service_ adalah _service_ yang bertugas untuk mengakses _file_ dalam _server_ secara aman.
+
 # Javascript _Service_
 
 Javascript _Service_ adalah _service_ yang bertugas untuk meng-_handle_ _endpoint_ Javascript. Anda dapat melakukan apapun pada _service_ ini termasuk _HTTP Call_, _Database Query, Database Manipulation, Load File, Store File,_ dan pastinya memanipulasi _request_ maupun _response_. Javascript _Service_ diperuntukan untuk mengakomodir _custom logic_ serta untuk memudahkan dalam integrasi dengan sistem lain tanpa perlu membuat _middleware system_ antara Lawang dan _client_.
