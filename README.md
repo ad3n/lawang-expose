@@ -292,7 +292,7 @@ _Database Service_ adalah _service_ yang bertugas untuk meng-_handle endpoint da
 
 # _File Service_
 
-_File Service_ adalah _service_ yang bertugas untuk mengakses _file_ dalam _server_ secara aman.
+_File Service_ adalah _service_ yang bertugas untuk mengakses _file_ dalam _server_ secara aman. _File Service_ hanya dapat diakses menggunakan _credentials_ (_private endpoint_)
 
 # Javascript _Service_
 
