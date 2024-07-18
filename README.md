@@ -1,10 +1,64 @@
-# HTTP _Service_
+# LAWANG API MANAGEMENT PLATFORM
+
+# Policy
+
+_Policy_ adalah mekanisme untuk memodifikasi _body request_ maupun _response_ ketika Api dipanggil. _Policy_ bersifat _global_ dan berlaku pada semua Api yang memenuhi kondisi pada _rule_. _Rule_ dibuat menggunakan Javascript sehingga lebih mudah dan fleksibel, menggunakan _objects_ maupun _functions_ berikut:
+
+```js
+// string
+$PC.uri
+// string
+$PC.method
+// string
+$PC.queries
+// string
+$PC.params
+// string
+$PC.headers
+// string
+$PC.payload
+
+/**
+ * request: object
+ * response: object
+ **/
+$PC.result(request, response): void
+```
+
+## _Policy Scope_
+
+Terdapat tiga _scope_ dari _policy_ yaitu *request*, *logging* dan *response* yang gunanya untuk memodifikasi maupun mem-_filter_ `request` dan `response` sebelum dikirim ke _caller_ (pemanggil)
+
+## Contoh _policy_
+
+```js
+// You can add conditions and/or your logic
+
+let request = JSON.parse($PC.request)
+
+request.test = "injected"
+
+let response = JSON.parse($PC.response)
+
+response.test = "injected"
+
+$PC.result(request, response)
+
+```
+
+Anggap _scope_ dari _policy_ di atas adalah *logging* maka pada data _log_ pada _fields_ `request_body` dan `response_body` akan ditambahkan _field_ `test` yang berisi `injected`.
+
+# Services
+
+_Service_ adalah kumpulan fungsionalitas yang disediakan Lawang untuk memberikan kemudahan dan fleksibilitas dalam pembuatan serta pengelompokan Api.
+
+## HTTP _Service_
 
 HTTP _Service_ adalah _service_ yang bertugas untuk meng-_handle_ HTTP _Endpoint_ pada internal Lawang. _By default_, HTTP _Service_ menerapkan _circuit breaker_ per _backend/connection/host_ untuk menghindari _traffic flooding_ dan mengoptimalkan kinerja dari Lawang itu sendiri. HTTP Service juga menerapkan [zero trust](https://www.krakend.io/docs/design/zero-trust) untuk memastikan keamanan transmisi antara _client_ dan _backend/connection/host_.
 
 HTTP _Service support Basic Auth, Single Key Auth (Api Key Only)_ maupun _Double Keys Auth (Api Key and Token)_, selain itu HTTP _Service_ juga mendukung _response transformation_ untuk memudahkan dalam memanipulasi _response_ dari _endpoint_. _Response transformation_ hanya dapat digunakan untuk _json response_.  
 
-## _JSON to JSON Transformation (Response Transformation)_
+### _JSON to JSON Transformation (Response Transformation)_
 
 JSON to JSON _Transformation_ berfungsi untuk memanipulasi _response_ pada HTTP _Service_ menggunakan spesifikasi sesuai dengan spesifikasi [GJson](https://github.com/tidwall/gjson) dengan _syntax_ sebagai berikut:
 
@@ -286,21 +340,21 @@ Dan berikut adalah contoh penggunaan dari _response transformer_:
 
 *NB: Jika Anda perlu lebih dari sekedar _response manipulations_, saya sarankan Anda menggunakan Javascript _Service_.*
 
-# _Database Service_
+## _Database Service_
 
 _Database Service_ adalah _service_ yang bertugas untuk meng-_handle endpoint database_. _Database Service_ mem-_provide_ beberapa _driver database_ antara lain MySQL, PostgSQL, Oracle, dll yang dapat mengimplementasikan [`database/sql`](https://go.dev/wiki/SQLDrivers). Pada _Database Service_, hanya diperbolehkan melakukan _query_ `SELECT`.
 
-# _File Service_
+## _File Service_
 
 _File Service_ adalah _service_ yang bertugas untuk mengakses _file_ dalam _server_ secara aman. _File Service_ hanya dapat diakses menggunakan _credentials_ (_private endpoint_)
 
-# Javascript _Service_
+## Javascript _Service_
 
 Javascript _Service_ adalah _service_ yang bertugas untuk meng-_handle_ _endpoint_ Javascript. Anda dapat melakukan apapun pada _service_ ini termasuk _HTTP Call_, _Database Query, Database Manipulation, Load File, Store File,_ dan pastinya memanipulasi _request_ maupun _response_. Javascript _Service_ diperuntukan untuk mengakomodir _custom logic_ serta untuk memudahkan dalam integrasi dengan sistem lain tanpa perlu membuat _middleware system_ antara Lawang dan _client_.
 
 Javascript _Service_ menggunakan EcmaScript6 dengan beberapa penambahan _objects_ maupun _functions_ bawaan namun tidak mendukung untuk menggunakan EcmaScript6 _module_, sehingga `export` dan `import` _keywords_ tidak dapat digunakan pada Lawang.
 
-## _Internal Objects_ dan _Functions_
+### _Internal Objects_ dan _Functions_
 
 Berikut adalah _internal objects_ dan _functions_ yang tersedia pada Lawang. Semua yang datang dari lawang baik *_objects_* maupun *_response functions_* akan dikirim dalam format `string` kecuali untuk tipe data primitif, sebagian berisi JSON _string_ sehingga perlu fungsi `JSON.parse()` untuk mengubah menjadi JSON _object_
 
@@ -423,7 +477,7 @@ $GT.response(body, code): void
 
 ```
 
-## Javascript _Libraries_
+### Javascript _Libraries_
 
 Selain _internal objects_ dan _functions_, Lawang juga secara _default_ mendukung penggunaan _libraries_ Javascript berikut:
 
