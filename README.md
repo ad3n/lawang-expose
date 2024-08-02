@@ -442,6 +442,7 @@ $GT.update(source, table, identities, payload): void
  * 
  * payload: string
  * encoded: string
+ * useBase64Encoded: boolean
  * plainText: string
  * secret: string
  * privateKey: string
@@ -449,6 +450,7 @@ $GT.update(source, table, identities, payload): void
  **/
 $GT.hmac512(payload, secret): string
 $GT.hmac256(payload, secret): string
+$GT.hmac256(payload, secret, useBase64Encoded): string
 $GT.sha256_signing(payload, privateKey): string
 $GT.sha256_verify(encoded, plainText, publicKey): bool
 
