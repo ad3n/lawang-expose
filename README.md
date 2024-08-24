@@ -476,8 +476,9 @@ $GT.store_file(source, body, path): void
 /**
  * body: object
  * code: int
+ * contentType: string
  **/
-$GT.response(body, code): void
+$GT.response(body, code, contentType): void
 
 ```
 
