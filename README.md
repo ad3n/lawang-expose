@@ -480,6 +480,11 @@ $GT.store_file(source, body, path): void
  **/
 $GT.response(body, code, contentType): void
 
+/**
+ * payload: string
+ **/
+$GT.log(payload): void
+
 ```
 
 ### Javascript _Libraries_
