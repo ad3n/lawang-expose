@@ -67,34 +67,11 @@ $RL.headers
 $RL.request
 
 /**
- * request: object
- * response: object
+ * body: object
+ * code: int
  **/
-$PC.result(request, response): void
+$RL.result(body, code): void
 ```
-
-## _Policy Scope_
-
-Terdapat tiga _scope_ dari _policy_ yaitu *request*, *logging* dan *response* yang gunanya untuk memodifikasi maupun mem-_filter_ `request` dan `response` sebelum dikirim ke _caller_ (pemanggil)
-
-## Contoh _policy_
-
-```js
-// You can add conditions and/or your logic
-
-let request = JSON.parse($PC.request)
-
-request.test = "injected"
-
-let response = JSON.parse($PC.response)
-
-response.test = "injected"
-
-$PC.result(request, response)
-
-```
-
-Anggap _scope_ dari _policy_ di atas adalah *logging* maka pada data _log_ pada _fields_ `request_body` dan `response_body` akan ditambahkan _field_ `test` yang berisi `injected`.
 
 # Services
 
