@@ -16,7 +16,55 @@ $PC.params
 // string
 $PC.headers
 // string
-$PC.payload
+$PC.request
+
+/**
+ * request: object
+ * response: object
+ **/
+$PC.result(request, response): void
+```
+
+## _Policy Scope_
+
+Terdapat tiga _scope_ dari _policy_ yaitu *request*, *logging* dan *response* yang gunanya untuk memodifikasi maupun mem-_filter_ `request` dan `response` sebelum dikirim ke _caller_ (pemanggil)
+
+## Contoh _policy_
+
+```js
+// You can add conditions and/or your logic
+
+let request = JSON.parse($PC.request)
+
+request.test = "injected"
+
+let response = JSON.parse($PC.response)
+
+response.test = "injected"
+
+$PC.result(request, response)
+
+```
+
+Anggap _scope_ dari _policy_ di atas adalah *logging* maka pada data _log_ pada _fields_ `request_body` dan `response_body` akan ditambahkan _field_ `test` yang berisi `injected`.
+
+# Interceptor
+
+_Interceptor_ adalah mekanisme untuk me-_reject request_ atau meneruskan _request_ berdasarkan _rules_. Sama seperti _Policy_, _interceptor_ bersifat _global_ dan berlaku pada semua Api yang memenehi _rule_. _Rule_ dibuat menggunakan Javascript sehingga lebih mudah dan fleksibel, menggunakan _objects_ maupun _functions_ berikut:
+
+```js
+// string
+$RL.uri
+// string
+$RL.method
+// string
+$RL.queries
+// string
+$RL.params
+// string
+$RL.headers
+// string
+$RL.request
 
 /**
  * request: object
