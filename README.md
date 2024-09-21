@@ -2,12 +2,18 @@
 
 # Key Features
 
-- Secure (implement [Zero Trust](https://en.wikipedia.org/wiki/Zero_trust_security_model) approac
+- Secure (mengimplementasikan [Zero Trust](https://en.wikipedia.org/wiki/Zero_trust_security_model))
 - Fast and Stable
 - Zero Downtime
 - Multiple Backend (HTTP, Database (SQL), Javascript and File System)
-- Easy to Customize (using Javascript)
+- Easy to Customize (menggunakan Javascript)
 - Lighweight (Low Memory Footprint)
+
+# Lawang Javascript Engine
+
+Lawang API Management menggunakan v8 Javascript Engine dengan sangat efektif dan efisien memisahkan antara proses kompilasi dan proses eksekusi. Berikut adalah diagram flow eksekusi Javascript pada Lawang  
+
+![Javascript](https://github.com/user-attachments/assets/2827d556-f499-4b1e-a8e1-bf87e54da5fd)
 
 # Policy
 
