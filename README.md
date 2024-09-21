@@ -1,8 +1,17 @@
 # LAWANG API MANAGEMENT PLATFORM
 
+# Key Features
+
+- Secure (implement [Zero Trust](https://en.wikipedia.org/wiki/Zero_trust_security_model) approac
+- Fast and Stable
+- Zero Downtime
+- Multiple Backend (HTTP, Database (SQL), Javascript and File System)
+- Easy to Customize (using Javascript)
+- Lighweight (Low Memory Footprint)
+
 # Policy
 
-_Policy_ adalah mekanisme untuk memodifikasi _body request_ maupun _response_ ketika Api dipanggil. _Policy_ bersifat _global_ dan berlaku pada semua Api yang memenuhi kondisi pada _rule_. _Rule_ dibuat menggunakan Javascript sehingga lebih mudah dan fleksibel, menggunakan _objects_ maupun _functions_ berikut:
+_Policy_ adalah mekanisme untuk memodifikasi _body request_ maupun _response_ ketika Api dipanggil. _Policy_ menempel pada endpoint dan berlaku pada Api yang memenuhi kondisi pada _rule_. _Rule_ dibuat menggunakan Javascript sehingga lebih mudah dan fleksibel, menggunakan _objects_ maupun _functions_ berikut:
 
 ```js
 // string
@@ -50,7 +59,7 @@ Anggap _scope_ dari _policy_ di atas adalah *logging* maka pada data _log_ pada 
 
 # Interceptor
 
-_Interceptor_ adalah mekanisme untuk me-_reject request_ atau meneruskan _request_ berdasarkan _rules_. Sama seperti _Policy_, _interceptor_ bersifat _global_ dan berlaku pada semua Api yang memenehi _rule_. _Rule_ dibuat menggunakan Javascript sehingga lebih mudah dan fleksibel, menggunakan _objects_ maupun _functions_ berikut:
+_Interceptor_ adalah mekanisme untuk me-_reject request_ atau meneruskan _request_ berdasarkan _rules_. Sama seperti _Policy_, _interceptor_ menempel pada endpoint dan berlaku pada Api yang memenehi _rule_. _Rule_ dibuat menggunakan Javascript sehingga lebih mudah dan fleksibel, menggunakan _objects_ maupun _functions_ berikut:
 
 ```js
 // string
