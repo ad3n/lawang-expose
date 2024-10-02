@@ -495,6 +495,8 @@ $GT.hmac256(payload, secret): string
 $GT.hmac256(payload, secret, useBase64Encoded): string
 $GT.sha256_signing(payload, privateKey): string
 $GT.sha256_verify(encoded, plainText, publicKey): bool
+$GT.jwtrs256_signing(payload, privateKey): string
+$GT.jwtrs256_verify(token, publicKey): string
 
 /**
  * Fungsi ini diload menggunakan plugin
