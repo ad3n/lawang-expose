@@ -411,6 +411,8 @@ $GT.params
 $GT.headers
 // string
 $GT.payload
+// string
+$GT.client_ip
 
 /**
  * Fungsi ini diload menggunakan plugin
