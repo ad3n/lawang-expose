@@ -412,6 +412,8 @@ $GT.headers
 // string
 $GT.payload
 // string
+$GT.files
+// string
 $GT.client_ip
 
 /**
