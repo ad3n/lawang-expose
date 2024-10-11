@@ -527,6 +527,7 @@ $GT.store_file(source, body, path): void
  * message: object {"mime": "text/html", "body": "content"}
  * attachment: object {"source": "source", "file": "path.to.file.ext"}
  **/
+$GT.send_mail(source, from, to, message): void
 $GT.send_mail(source, from, to, message, attachment): void
 
 /**
