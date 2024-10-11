@@ -524,11 +524,12 @@ $GT.store_file(source, body, path): void
  * source: string
  * from: string
  * to: string
+ * subject: string
  * message: object {"mime": "text/html", "body": "content"}
  * attachment: object {"source": "source", "file": "path.to.file.ext"}
  **/
-$GT.send_mail(source, from, to, message): void
-$GT.send_mail(source, from, to, message, attachment): void
+$GT.send_mail(source, from, to, subject, message): void
+$GT.send_mail(source, from, to, subject, message, attachment): void
 
 /**
  * body: object
