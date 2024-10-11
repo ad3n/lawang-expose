@@ -523,7 +523,7 @@ $GT.store_file(source, body, path): void
 /**
  * source: string
  * from: string
- * to: []string
+ * to: string
  * message: object {"mime": "text/html", "body": "content"}
  * attachment: object {"source": "source", "file": "path.to.file.ext"}
  **/
