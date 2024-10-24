@@ -519,6 +519,7 @@ $GT.transform(json, spec): string
 $GT.load_file(source, path): string
 $GT.check_file(source, path): int
 $GT.store_file(source, body, path): void
+$GT.mkdir(source, path): void
 
 /**
  * source: string
