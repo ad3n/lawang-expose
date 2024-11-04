@@ -25,7 +25,33 @@ Berikut adalah arsitektur Lawang secara umum
 
 # Deployment Process (Backend/Endpoint/Policy/Interceptor)
 
+Seperti terlihat pada gambar arsitektur di atas, terdapat proses **Get Config** yang menghubungkan antara Console dan Core. Config di sini meliputi:
+> Setting
+>
+> File Storage Config
+>
+> Database Config
+>
+> SMTP/Email Config
+>
+> Backend
+>
+> Endpoint
+>
+> Policy
+>
+> Interceptor
 
+Process **Get Config** (untuk memudahkan kita sebut saja deployment), terjadi dalam beberapa proses yaitu:
+> 1. Bootstrapping (Start Core - ini akan mengambil semua config yang disebutkan di bawah) 
+> 2. Manual Restart (triggered by Console)
+> 3. File Storage Config Deployment (triggered by Console)
+> 4. Database Config Deployment (triggered by Console)
+> 5. STMP/Email Config Deployment (triggered by Console)
+> 6. Backend Deployment (triggered by Console)
+> 7. Endpoint Deployment (triggered by Console)
+> 8. Policy Deployment (triggered by Console)
+> 9. Interceptor Deployment (triggered by Console)
 
 # Lawang Javascript Engine
 
