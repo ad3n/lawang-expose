@@ -15,10 +15,12 @@ Secara sederhana, arsitektur Lawang memisahkan antara administratif (Console) da
 
 Berikut adalah arsitektur Lawang secara umum
 
-> 1. Dengan Load Balancer
+## 1. Dengan Load Balancer
+
 ![Lawang Architecture](https://github.com/user-attachments/assets/ef1a596c-efb8-442c-b5e0-cf10a246d71e)
 
-> 2. Tanpa Load Balancer  
+## 2. Tanpa Load Balancer
+
 ![Lawang Architecture Without LB](https://github.com/user-attachments/assets/f3c1b3c2-ba7b-42fb-a784-ea6d73c4d7a0)
 
 # Deployment Process (Backend/Endpoint/Policy/Interceptor)
