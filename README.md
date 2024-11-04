@@ -9,6 +9,22 @@
 - Easy to Customize (menggunakan Javascript)
 - Lighweight (Low Memory Footprint)
 
+# Lawang Arsitektur
+
+Secara sederhana, arsitektur Lawang memisahkan antara administratif (Console) dan engine (Core). Ini dilakukan agar proses administratif tidak berpengaruh terhadap performance dari engine (Core) dan agar kesalahan konfigurasi yang terjadi secara tidak sengaja tidak langsung berimbas ke engine (Core).
+
+Berikut adalah arsitektur Lawang secara umum
+
+> 1. Dengan Load Balancer
+![Lawang Architecture](https://github.com/user-attachments/assets/ef1a596c-efb8-442c-b5e0-cf10a246d71e)
+
+> 2. Tanpa Load Balancer  
+![Lawang Architecture Without LB](https://github.com/user-attachments/assets/f3c1b3c2-ba7b-42fb-a784-ea6d73c4d7a0)
+
+# Deployment Process (Backend/Endpoint/Policy/Interceptor)
+
+
+
 # Lawang Javascript Engine
 
 Lawang API Management menggunakan v8 Javascript Engine dengan sangat efektif dan efisien memisahkan antara proses kompilasi dan proses eksekusi. Berikut adalah diagram flow eksekusi Javascript pada Lawang  
