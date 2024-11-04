@@ -53,6 +53,12 @@ Process **Get Config** (untuk memudahkan kita sebut saja deployment), terjadi da
 > 8. Policy Deployment (triggered by Console)
 > 9. Interceptor Deployment (triggered by Console)
 
+Proses deployment ini menggunakan [gRPC](https://grpc.io/docs/what-is-grpc/) untuk memastikan efektifitas dan efisiensi serta keamanan dalam pertukaran data karena pada gRPC menggunakan contract yang disebut dengan [Protocol Buffer](https://protobuf.dev/overview/).
+
+# Authentication and Authorization
+
+
+
 # Lawang Javascript Engine
 
 Lawang API Management menggunakan v8 Javascript Engine dengan sangat efektif dan efisien memisahkan antara proses kompilasi dan proses eksekusi. Berikut adalah diagram flow eksekusi Javascript pada Lawang  
