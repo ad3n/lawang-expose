@@ -134,8 +134,10 @@ $RL.request
 /**
  * body: object
  * code: int
+ * contentType: string
  **/
 $RL.result(body, code): void
+$RL.result(body, code, contentType): void
 ```
 
 # Services
