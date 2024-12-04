@@ -136,8 +136,8 @@ $RL.request
  * code: int
  * contentType: string
  **/
-$RL.result(body, code): void
-$RL.result(body, code, contentType): void
+$RL.result(body, code): object
+$RL.result(body, code, contentType): object
 ```
 
 # Services
@@ -483,43 +483,43 @@ $GT.md5(payload): string
  * headers: object
  * timeout: int (in second)
  **/
-$GT.request(method, url): string
-$GT.request(method, url, body): string
-$GT.request(method, url, timeout): string
-$GT.request(method, url, body, headers): string
-$GT.request(method, url, body, timeout): string
-$GT.request(method, url, body, headers, timeout): string
+$GT.request(method, url): object
+$GT.request(method, url, body): object
+$GT.request(method, url, timeout): object
+$GT.request(method, url, body, headers): object
+$GT.request(method, url, body, timeout): object
+$GT.request(method, url, body, headers, timeout): object
 
-$GT.get(url): string
-$GT.get(url, headers): string
-$GT.get(url, timeout): string
-$GT.get(url, headers, timeout): string
+$GT.get(url): object
+$GT.get(url, headers): object
+$GT.get(url, timeout): object
+$GT.get(url, headers, timeout): object
 
-$GT.post(url): string
-$GT.post(url, body): string
-$GT.post(url, timeout): string
-$GT.post(url, body, headers): string
-$GT.post(url, body, timeout): string
-$GT.post(url, body, headers, timeout): string
+$GT.post(url): object
+$GT.post(url, body): object
+$GT.post(url, timeout): object
+$GT.post(url, body, headers): object
+$GT.post(url, body, timeout): object
+$GT.post(url, body, headers, timeout): object
 
-$GT.put(url): string
-$GT.put(url, body): string
-$GT.put(url, timeout): string
-$GT.put(url, body, headers): string
-$GT.put(url, body, timeout): string
-$GT.put(url, body, headers, timeout): string
+$GT.put(url): object
+$GT.put(url, body): object
+$GT.put(url, timeout): object
+$GT.put(url, body, headers): object
+$GT.put(url, body, timeout): object
+$GT.put(url, body, headers, timeout): object
 
-$GT.patch(url): string
-$GT.patch(url, body): string
-$GT.patch(url, timeout): string
-$GT.patch(url, body, headers): string
-$GT.patch(url, body, timeout): string
-$GT.patch(url, body, headers, timeout): string
+$GT.patch(url): object
+$GT.patch(url, body): object
+$GT.patch(url, timeout): object
+$GT.patch(url, body, headers): object
+$GT.patch(url, body, timeout): object
+$GT.patch(url, body, headers, timeout): object
 
-$GT.delete(url): string 
-$GT.delete(url, headers): string 
-$GT.delete(url, timeout): string 
-$GT.delete(url, headers, timeout): string 
+$GT.delete(url): object 
+$GT.delete(url, headers): object 
+$GT.delete(url, timeout): object 
+$GT.delete(url, headers, timeout): object 
 
 /**
  * source: string
@@ -528,7 +528,7 @@ $GT.delete(url, headers, timeout): string
  * identities: object
  * payload: object
  **/
-$GT.query(source, sql): string 
+$GT.query(source, sql): []object 
 $GT.save(source, table, payload): void
 $GT.upsert(source, table, identities, payload): void
 $GT.update(source, table, identities, payload): void
@@ -560,15 +560,15 @@ $GT.jwtrs256_verify(token, publicKey): string
  * json: string
  * spec: string
  **/
-$GT.xml2json(xml): string
-$GT.transform(json, spec): string
+$GT.xml2json(xml): object
+$GT.transform(json, spec): object
 
 /**
  * source: string
  * path: string
  * body: string
  **/
-$GT.load_file(source, path): string
+$GT.load_file(source, path): []byte
 $GT.check_file(source, path): int
 $GT.store_file(source, body, path): void
 $GT.mkdir(source, path): void
@@ -578,8 +578,8 @@ $GT.mkdir(source, path): void
  * code: int
  * contentType: string
  **/
-$GT.response(body, code): void
-$GT.response(body, code, contentType): void
+$GT.response(body, code): object
+$GT.response(body, code, contentType): object
 
 /**
  * payload: string
