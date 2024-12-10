@@ -590,10 +590,10 @@ $GT.response(body, code, contentType): object
  **/
 $GT.log(payload): void
 
+/**
+ * file: string
+ **/
+$GT.import(file): void
+
 ```
 
-### Javascript _Libraries_
-
-Selain _internal objects_ dan _functions_, Lawang juga secara _default_ mendukung penggunaan _libraries_ Javascript berikut:
-
-- [MomentJS](https://momentjs.com) : dapat dipanggil dengan _syntax_ `moment()`
