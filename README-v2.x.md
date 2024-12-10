@@ -527,12 +527,14 @@ $GT.delete(url, headers, timeout): object
  * source: string
  * sql: string
  * params: []any
+ * timeout: int
  * table: string
  * identities: object
  * payload: object
  **/
 $GT.query(source, sql): []object
-$GT.query(source, sql, params): []object 
+$GT.query(source, sql, params): []object
+$GT.query(source, sql, params, timeout): []object 
 $GT.save(source, table, payload): void
 $GT.upsert(source, table, identities, payload): void
 $GT.update(source, table, identities, payload): void
