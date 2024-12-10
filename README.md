@@ -450,6 +450,8 @@ Javascript _Service_ menggunakan EcmaScript6 dengan beberapa penambahan _objects
 
 Berikut adalah _internal objects_ dan _functions_ yang tersedia pada Lawang. Semua yang datang dari lawang baik *_objects_* maupun *_response functions_* akan dikirim dalam format `string` kecuali untuk tipe data primitif, sebagian berisi JSON _string_ sehingga perlu fungsi `JSON.parse()` untuk mengubah menjadi JSON _object_
 
+**NB: Signatures/Parameters dari fungsi-fungsi di bawah adalah untuk Lawang v2.x untuk Lawang v1.x tidak ada perubahan**
+
 ```js
 // string
 $GT.uri
