@@ -583,6 +583,7 @@ $GT.mkdir(source, path): void
  * code: int
  * contentType: string
  **/
+$GT.response(body): object
 $GT.response(body, code): object
 $GT.response(body, code, contentType): object
 
