@@ -32,8 +32,6 @@ Seperti terlihat pada gambar arsitektur di atas, terdapat proses **Get Config** 
 >
 > Database Config
 >
-> SMTP/Email Config
->
 > Backend
 >
 > Endpoint
@@ -47,11 +45,10 @@ Process **Get Config** (untuk memudahkan kita sebut saja deployment), terjadi da
 > 2. Manual Restart (triggered by Console)
 > 3. File Storage Config Deployment (triggered by Console)
 > 4. Database Config Deployment (triggered by Console)
-> 5. STMP/Email Config Deployment (triggered by Console)
-> 6. Backend Deployment (triggered by Console)
-> 7. Endpoint Deployment (triggered by Console)
-> 8. Policy Deployment (triggered by Console)
-> 9. Interceptor Deployment (triggered by Console)
+> 5. Backend Deployment (triggered by Console)
+> 6. Endpoint Deployment (triggered by Console)
+> 7. Policy Deployment (triggered by Console)
+> 8. Interceptor Deployment (triggered by Console)
 
 Proses deployment ini menggunakan [gRPC](https://grpc.io/docs/what-is-grpc/) untuk memastikan efektifitas dan efisiensi serta keamanan dalam pertukaran data karena pada gRPC menggunakan contract yang disebut dengan [Protocol Buffer](https://protobuf.dev/overview/).
 
