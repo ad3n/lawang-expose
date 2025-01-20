@@ -140,6 +140,26 @@ $RL.result(body, code): object
 $RL.result(body, code, contentType): object
 ```
 
+# Request Validator
+
+_Request Validator_ adalah mekanisme untuk memastikan _ format request body_ tidak sembarang dikirim berdasarkan _JSON Schema_ yang telah ditentukan. _Request Validator_ menempel pada endpoint sama hal nya dengan _Interceptor_ dan _Policy_. _JSON Schema Specification_ yang digunakan adalah [2020-12](https://json-schema.org/draft/2020-12)
+
+## Contoh Request Validator
+
+```js
+{
+    "type": "object",
+    "properties": {
+    	"name": {"type": "string"},
+    	"age": {"type": "integer", "minimum":20}
+    },
+	"required": ["name", "age"]
+}
+```
+
+dari contoh _schema_ diatas, _request body_ harus memiliki property dengan field sebagai berikut: `name` dengan tipe data `string`  dan `age` dengan tipe data `integer` dan _value_ dari `age` _minimum_ adalah 20
+
+
 # Services
 
 _Service_ adalah kumpulan fungsionalitas yang disediakan Lawang untuk memberikan kemudahan dan fleksibilitas dalam pembuatan serta pengelompokan Api.
