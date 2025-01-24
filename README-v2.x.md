@@ -487,8 +487,6 @@ $GT.files
 $GT.client_ip
 
 /**
- * Fungsi ini diload menggunakan plugin
- * 
  * payload: string
  **/
 $GT.uuid(): string
@@ -556,8 +554,6 @@ $GT.upsert(source, table, identities, payload): void
 $GT.update(source, table, identities, payload): void
 
 /**
- * Fungsi ini diload menggunakan plugin
- *
  * payload: string
  * claim: object
  * encoded: string
@@ -576,8 +572,6 @@ $GT.jwtrs256_signing(claim, privateKey): string
 $GT.jwtrs256_verify(token, publicKey): string
 
 /**
- * Fungsi ini diload menggunakan plugin
- * 
  * xml: string
  * json: string
  * spec: string
