@@ -610,3 +610,4 @@ $GT.import(file): void
 
 ```
 
+*NB: Untuk `$GT.query()`, untuk penggunaan _query binding_, maka pada `sql` untuk _parameter placeholder_ disesuaikan dengan dialek atau SQL masing-masing platform*
