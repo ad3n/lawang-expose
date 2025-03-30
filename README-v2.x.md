@@ -139,7 +139,7 @@ $RL.result(body, code, contentType): object
 
 # Request Validator
 
-_Request Validator_ adalah mekanisme untuk memastikan _ format request body_ tidak sembarang dikirim berdasarkan _JSON Schema_ yang telah ditentukan. _Request Validator_ menempel pada endpoint sama hal nya dengan _Interceptor_ dan _Policy_. _JSON Schema Specification_ yang digunakan adalah [2020-12](https://json-schema.org/draft/2020-12)
+_Request Validator_ adalah mekanisme untuk memastikan _format request body_ tidak sembarang dikirim berdasarkan _JSON Schema_ yang telah ditentukan. _Request Validator_ menempel pada endpoint sama hal nya dengan _Interceptor_ dan _Policy_. _JSON Schema Specification_ yang digunakan adalah [2020-12](https://json-schema.org/draft/2020-12)
 
 ## Contoh Request Validator
 
