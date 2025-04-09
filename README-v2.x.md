@@ -4,7 +4,7 @@
 
 - Secure (mengimplementasikan [Zero Trust](https://en.wikipedia.org/wiki/Zero_trust_security_model))
 - Fast and Stable
-- Zero Downtime
+- Near Zero Downtime
 - Multiple Backend (HTTP, Database (SQL), Javascript and File System)
 - Easy to Customize (menggunakan Javascript)
 - Lighweight (Low Memory Footprint)
@@ -364,6 +364,7 @@ $GT.delete(url, headers, timeout): object
  **/
 $GT.query(source, sql): []object
 $GT.query(source, sql, params): []object
+$GT.query(source, sql, timeout): []object
 $GT.query(source, sql, params, timeout): []object 
 $GT.save(source, table, payload): void
 $GT.upsert(source, table, identities, payload): void
