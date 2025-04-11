@@ -4,7 +4,7 @@
 
 - Secure (mengimplementasikan [Zero Trust](https://en.wikipedia.org/wiki/Zero_trust_security_model))
 - Fast and Stable
-- Near Zero Downtime
+- Zero Downtime
 - Multiple Backend (HTTP, Database (SQL), Javascript and File System)
 - Easy to Customize (menggunakan Javascript)
 - Lighweight (Low Memory Footprint)
