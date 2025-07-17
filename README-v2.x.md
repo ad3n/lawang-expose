@@ -418,6 +418,7 @@ $GT.mkdir(source, path): void
 $GT.response(body): object
 $GT.response(body, code): object
 $GT.response(body, code, contentType): object
+$GT.response(body, code, headers): object
 $GT.response(body, code, contentType, headers): object
 
 /**
