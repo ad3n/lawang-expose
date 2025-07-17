@@ -413,10 +413,12 @@ $GT.mkdir(source, path): void
  * body: object
  * code: int
  * contentType: string
+ * headers: object
  **/
 $GT.response(body): object
 $GT.response(body, code): object
 $GT.response(body, code, contentType): object
+$GT.response(body, code, contentType, headers): object
 
 /**
  * payload: string
