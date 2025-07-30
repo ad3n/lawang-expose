@@ -423,6 +423,7 @@ $GT.client_ip
  **/
 $GT.uuid(): string
 $GT.md5(payload): string
+$GT.sha256(payload): string
 
 /**
  * url: string
