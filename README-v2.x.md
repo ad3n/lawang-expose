@@ -1,4 +1,4 @@
-# LAWANG API MANAGEMENT PLATFORM
+    # LAWANG API MANAGEMENT PLATFORM
 
 # Key Features
 
@@ -307,6 +307,7 @@ $GT.client_ip
  **/
 $GT.uuid(): string
 $GT.md5(payload): string
+$GT.sha256(payload): string
 
 /**
  * url: string
