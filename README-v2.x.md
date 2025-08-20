@@ -81,6 +81,11 @@ $PC.headers
 $PC.request
 
 /**
+ * payload: string
+ **/
+$PC.encrypt(payload): string
+
+/**
  * request: object
  * response: object
  **/
