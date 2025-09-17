@@ -1,4 +1,4 @@
-    # LAWANG API MANAGEMENT PLATFORM
+# LAWANG API MANAGEMENT PLATFORM
 
 # Key Features
 
@@ -431,6 +431,13 @@ $GT.response(body, code, contentType, headers): object
  * payload: string
  **/
 $GT.log(payload): void
+
+/**
+ * source: string
+ * topic: string
+ * payload: object
+ **/
+$GT.publish(source, topic, payload): void
 
 /**
  * file: string
