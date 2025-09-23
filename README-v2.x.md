@@ -378,6 +378,8 @@ $GT.upsert(source, table, identities, payload): void
 $GT.upsert(source, table, identities, payload, timeout): void
 $GT.update(source, table, identities, payload): void
 $GT.update(source, table, identities, payload, timeout): void
+$GT.exists(source, table, payload): void
+$GT.exists(source, table, payload, timeout): void
 
 /**
  * payload: string
