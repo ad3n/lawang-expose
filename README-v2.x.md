@@ -398,6 +398,8 @@ $GT.sha256_signing(payload, privateKey): string
 $GT.sha256_verify(encoded, plainText, publicKey): bool
 $GT.jwtrs256_signing(claim, privateKey): string
 $GT.jwtrs256_verify(token, publicKey): string
+$GT.encrypt(secret, payload): string
+$GT.decrypt(secret, payload): string
 
 /**
  * xml: string
