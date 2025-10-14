@@ -380,6 +380,10 @@ $GT.update(source, table, identities, payload): void
 $GT.update(source, table, identities, payload, timeout): void
 $GT.exists(source, table, payload): void
 $GT.exists(source, table, payload, timeout): void
+$GT.exec(source, sql): void
+$GT.exec(source, sql, params): void
+$GT.exec(source, sql, timeout): void
+$GT.exec(source, sql, params, timeout): void
 
 /**
  * payload: string
