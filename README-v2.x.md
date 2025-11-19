@@ -365,7 +365,7 @@ $GT.delete(url, headers, timeout): object
  * params: []any
  * timeout: int
  * table: string
- * identities: object
+ * identities: []string
  * payload: object
  **/
 $GT.query(source, sql): []object
