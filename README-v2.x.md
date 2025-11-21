@@ -78,7 +78,19 @@ $PC.params
 // string
 $PC.headers
 // string
-$PC.request
+$GT.client_ip
+// string
+$GT.client_code
+// string
+$GT.client_name
+// string
+$GT.client_group_code
+// string
+$GT.client_group_name
+// string
+$RL.request
+// string
+$RL.response
 
 /**
  * payload: string
@@ -131,7 +143,19 @@ $RL.params
 // string
 $RL.headers
 // string
+$GT.client_ip
+// string
+$GT.client_code
+// string
+$GT.client_name
+// string
+$GT.client_group_code
+// string
+$GT.client_group_name
+// string
 $RL.request
+// string
+$RL.response
 
 /**
  * body: object
@@ -306,6 +330,14 @@ $GT.payload
 $GT.files
 // string
 $GT.client_ip
+// string
+$GT.client_code
+// string
+$GT.client_name
+// string
+$GT.client_group_code
+// string
+$GT.client_group_name
 
 /**
  * payload: string
