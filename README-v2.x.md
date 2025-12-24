@@ -399,6 +399,7 @@ $GT.delete(url, headers, timeout): object
  * table: string
  * identities: []string
  * payload: object
+ * callback: function(tx)
  **/
 $GT.query(source, sql): []object
 $GT.query(source, sql, params): []object
@@ -416,6 +417,7 @@ $GT.exec(source, sql): void
 $GT.exec(source, sql, params): void
 $GT.exec(source, sql, timeout): void
 $GT.exec(source, sql, params, timeout): void
+$GT.db(source, callback):void
 
 /**
  * payload: string
