@@ -450,10 +450,13 @@ $GT.transform(json, spec): object
 /**
  * value: string
  * n: int
+ * start: int
+ * end: int
  * mask: string
  **/
 $GT.mask_prefix(value, mask, n): string
 $GT.mask_suffix(value, mask, n): string
+$GT.mask(value, mask, start, end): string
 
 /**
  * source: string
