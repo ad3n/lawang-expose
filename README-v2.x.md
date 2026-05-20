@@ -463,9 +463,12 @@ $GT.mask(value, mask, start, end): string
  * path: string
  * body: string
  * separator: string
+ * sheet: int
  **/
 $GT.read_csv(source, path): []object
 $GT.read_csv(source, path, separator): []object
+$GT.read_excel(source, path): []object
+$GT.read_excel(source, path, sheet): []object
 $GT.load_file(source, path): []byte
 $GT.check_file(source, path): int
 $GT.store_file(source, body, path): void
