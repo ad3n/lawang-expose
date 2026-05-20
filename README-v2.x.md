@@ -463,6 +463,7 @@ $GT.mask(value, mask, start, end): string
  * path: string
  * body: string
  **/
+$GT.read_csv(source, path): []object
 $GT.load_file(source, path): []byte
 $GT.check_file(source, path): int
 $GT.store_file(source, body, path): void
