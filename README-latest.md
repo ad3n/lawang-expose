@@ -402,10 +402,10 @@ $GT.delete(url, headers, timeout): object
  * identities: []string
  * payload: object
  **/
-$GT.query(source, sql): []object
-$GT.query(source, sql, params): []object
-$GT.query(source, sql, timeout): []object
-$GT.query(source, sql, params, timeout): []object 
+$GT.query(source, sql): []object|null
+$GT.query(source, sql, params): []object|null
+$GT.query(source, sql, timeout): []object|null
+$GT.query(source, sql, params, timeout): []object|null 
 $GT.save(source, table, payload): void
 $GT.save(source, table, payload, timeout): void
 $GT.upsert(source, table, identities, payload): void
@@ -418,8 +418,8 @@ $GT.exec(source, sql): void
 $GT.exec(source, sql, params): void
 $GT.exec(source, sql, timeout): void
 $GT.exec(source, sql, params, timeout): void
-$GT.rfc(source, function, params, output): []object
-$GT.rfc(source, function, params, output, timeout): []object
+$GT.rfc(source, function, params, output): []object|null
+$GT.rfc(source, function, params, output, timeout): []object|null
 
 /**
  * payload: string
