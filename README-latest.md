@@ -418,6 +418,7 @@ $GT.exec(source, sql): void
 $GT.exec(source, sql, params): void
 $GT.exec(source, sql, timeout): void
 $GT.exec(source, sql, params, timeout): void
+$GT.rfc(source, function, params): []object|null
 $GT.rfc(source, function, params, output): []object|null
 $GT.rfc(source, function, params, output, timeout): []object|null
 
